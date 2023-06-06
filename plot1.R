@@ -29,9 +29,6 @@ install.packages(c("dplyr", "lubridate", "data.table", "ggplot2", "tidyr", "stri
   ## Add DateTime column
   dataFile <- cbind(dateTime, dataFile)
 
-  ## Format dateTime Column
-  dateTime$datafile <- as.POSIXct(dateTime)
-
 ## plot "global active power" histogram for subset dates
   
   hist(dataFile$Global_active_power, main="Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
